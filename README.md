@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 聊天室分为四个部分，前端，后端，qt客户端，c++服务器端。
 
 前端：用户注册，应用下载。
@@ -12,23 +10,22 @@ c++服务器端：数据转发。
 
 qt登录界面
 
->>>>>>> 0e7554fc66eb4825edacebc851c3f4c13f1bd4aa
-image
+![image](D:/Desktop/csdn/722/2.png)
 
 一开始我们没有用户名和密码那么点击注册。跳转到一个网页。
 
+```
 void Login::on_pushButton_2_clicked()//点击 注册 打开一个页面
 {
     QDesktopServices::openUrl(QUrl(QLatin1String("http://123.207.251.200/register.html")));//yunhu腾讯云注册
 }
+```
 按钮点击事件，跳转到注册网页。
 
-image
-<<<<<<< HEAD
+![image](D:/Desktop/csdn/722/4.png)
 
-=======
-···
->>>>>>> 0e7554fc66eb4825edacebc851c3f4c13f1bd4aa
+
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,11 +77,7 @@ image
         </div>
     </div>
 </div>
-<<<<<<< HEAD
 
-=======
-···
->>>>>>> 0e7554fc66eb4825edacebc851c3f4c13f1bd4aa
 <script type="text/javascript">
     $(document).ready(function() {
         $('#defaultForm')
@@ -170,8 +163,11 @@ image
     });
 </script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>···
->>>>>>> 0e7554fc66eb4825edacebc851c3f4c13f1bd4aa
+```
+
+
+
+
+
+
