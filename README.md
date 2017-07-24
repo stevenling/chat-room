@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+聊天室分为四个部分，前端，后端，qt客户端，c++服务器端。
+
+前端：用户注册，应用下载。
+
+后端：登录验证，前端数据传入数据库。
+
+qt客户端：登录界面，聊天界面。
+
+c++服务器端：数据转发。
+
+qt登录界面
+
+>>>>>>> 0e7554fc66eb4825edacebc851c3f4c13f1bd4aa
 image
 
 一开始我们没有用户名和密码那么点击注册。跳转到一个网页。
@@ -9,7 +24,11 @@ void Login::on_pushButton_2_clicked()//点击 注册 打开一个页面
 按钮点击事件，跳转到注册网页。
 
 image
+<<<<<<< HEAD
 
+=======
+···
+>>>>>>> 0e7554fc66eb4825edacebc851c3f4c13f1bd4aa
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,7 +80,11 @@ image
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
+=======
+···
+>>>>>>> 0e7554fc66eb4825edacebc851c3f4c13f1bd4aa
 <script type="text/javascript">
     $(document).ready(function() {
         $('#defaultForm')
@@ -147,4 +170,8 @@ image
     });
 </script>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>···
+>>>>>>> 0e7554fc66eb4825edacebc851c3f4c13f1bd4aa
