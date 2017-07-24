@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页-下载</title>
+
+    <link rel="stylesheet" href="bootstrap/vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrapValidator.css"/>
+
+    <script type="text/javascript" src="bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrapValidator.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <!-- form: -->
+        <section>
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="page-header">
+                    <h2>下载Chat Room 开启你的新生活</h2>
+                </div>
+
+                <form id="defaultForm" method="post" class="form-horizontal" action="download.php">
+                    <div class="alert alert-success" style="display: none;"></div>
+
+                    <div class="form-group">
+                        <div class="col-lg-9 col-lg-offset-3">
+                            <button type="submit" class="btn btn-primary">Download</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- :form -->
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#defaultForm')
+            .bootstrapValidator({
+                message: 'This value is not valid',
+                //live: 'submitted',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    username: {
+                        message: 'The username is not valid',
+                        validators: {
+                            notEmpty: {
+                                message: 'The username is required and can\'t be empty'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 30,
+                                message: 'The username must be more than 6 and less than 30 characters long'
+                            },
+                            /*remote: {
+                             url: 'remote.php',
+                             message: 'The username is not available'
+                             },*/
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_\.]+$/,
+                                message: 'The username can only consist of alphabetical, number, dot and underscore'
+                            }
+                        }
+                    },
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The email address is required and can\'t be empty'
+                            },
+                            emailAddress: {
+                                message: 'The input is not a valid email address'
+                            }
+                        }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The password is required and can\'t be empty'
+                            }
+                        }
+                    }
+                }
+            })
+            .on('success.form.bv', function(e) {
+                // Prevent submit form
+                e.preventDefault();
+                self.location = "download.php";
+                var $form     = $(e.target),
+                    validator = $form.data('bootstrapValidator');
+                $form.find('.alert').html('感谢您的下载，因作者水平有限，质量有待提高见谅！').show();
+            });
+    });
+</script>
+</body>
+</html>
