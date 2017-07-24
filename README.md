@@ -21,7 +21,7 @@ void Login::on_pushButton_2_clicked()//点击 注册 打开一个页面
 按钮点击事件，跳转到注册网页。
 
 image
-
+···
 <!DOCTYPE html>
 <html>
 <head>
@@ -159,4 +159,4 @@ image
     });
 </script>
 </body>
-</html>
+</html>···
