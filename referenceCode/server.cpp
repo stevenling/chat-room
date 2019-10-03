@@ -3,7 +3,6 @@
 #include <sys/socket.h>    
 #include <stdio.h>        
 #include <stdlib.h>  
-
 #include <string.h>       
 #include <unistd.h>
 #include <pthread.h>
@@ -12,11 +11,14 @@
 #include <list>  
 #include <algorithm> 
 #include <linux/tcp.h> 
+
 using namespace std;
+
 #define HELLO_WORLD_SERVER_PORT    4000
 #define LENGTH_OF_LISTEN_QUEUE 20
 #define BUFFER_SIZE 1024
 #define CLIENTNUMBER 100
+
 list<int> client;		//存放client Id。
 int clientId[CLIENTNUMBER];
 char sentBuff[1024];
@@ -30,10 +32,12 @@ int isConnected = 1;
 /**********************************
 *在存放client的id链表里，删除某个client的Id
 */
-int cutByvalue(list<int> &l, int value) {
+int cutByvalue(list<int> &l, int value) 
+{
 	for (list<int>::iterator iter = l.begin(); iter != l.end(); ++iter)
 	{
-		if (*iter == value) {
+		if (*iter == value) 
+		{
 			l.erase(iter);
 			return 1;
 		}
@@ -45,10 +49,12 @@ int cutByvalue(list<int> &l, int value) {
 /**********************
 *判断新连接的client端的id,是否是已连接的clinet。
 */
-int isFind(list<int> &l, int value) {
+int isFind(list<int> &l, int value) 
+{
 	for (list<int>::iterator iter = l.begin(); iter != l.end(); ++iter)
 	{
-		if (*iter == value) {
+		if (*iter == value) 
+		{
 			return 1;
 		}
 		//    printf("%d \n", *iter);
@@ -99,14 +105,14 @@ void initServiceSocket() {
 		printf("Server Listen Failed!");
 		exit(1);
 	}
-
 }
 
 
 /*********************************************
 *连接数字和整形，返回char*
 * */
-char *catCharInt(int n,char *b){
+char *catCharInt(int n,char *b)
+{
 	char c[10];
 	//itoa(n, c, 10);
 	snprintf(c, sizeof(c), "%d", n);
@@ -165,7 +171,8 @@ void* user(void* args) {
 /*************************************************
 *通过传入的Room结构体，创建一个房间用来两个用户数据的交互
 */
-void* setRoom(void* args) {
+void* setRoom(void* args) 
+{
 	Room *room;
 	room = (Room*)malloc(sizeof(Room));
 	room->boy = ((Room*)args)->girl;
@@ -246,7 +253,6 @@ int main(int argc, char **argv)
 		}
 
 	}
-
 	close(server_socket);
 	return 0;
 }

@@ -15,12 +15,10 @@ MainWindow::MainWindow(QWidget *parent, Manage *p) :
 {
 
     this->man = p;
-     //listview.setLayout(layout);
     ui->setupUi(this);
     showlist(); 
     connect(ui->widget,SIGNAL(itemSelectionChanged()),this,SLOT(sendtouser()));// 改变会触发槽函数sendtouser
      QObject::connect(listWidget, SIGNAL(currentTextChanged(QString)), this,SLOT(seek()));
-    //ui->lineEdit_2->setText(user);
     setWindowTitle("客户端");
     init();
     connect(ui->sendBtn,SIGNAL(clicked(bool)),SLOT(onSendMessage()));//按下发送按钮调用onSendMessage函数
@@ -36,8 +34,6 @@ void MainWindow::showlist()//显示好友列表
     QVBoxLayout* layout = new QVBoxLayout;
         listWidget = new QListWidget(this);
 
-        //QString s = "user";
-        //QString q, w, e, r, t, y;
         QListWidgetItem* lst1 = new QListWidgetItem("all", listWidget);
         QListWidgetItem* lst2 = new QListWidgetItem("abc", listWidget);
         QListWidgetItem* lst3 = new QListWidgetItem("leyiweb", listWidget);

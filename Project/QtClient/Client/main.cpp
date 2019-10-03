@@ -8,8 +8,6 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
-
     Manage c;
     return a.exec();
 }

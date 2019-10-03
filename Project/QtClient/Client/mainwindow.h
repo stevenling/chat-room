@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include<QtNetwork/QtNetwork>
 #include <QListWidget>
+
 namespace Ui {
 class MainWindow;
 }
@@ -19,12 +20,12 @@ public:
     void newTcpConnect();
     Manage* man;//manage类的一个对象
     QString userdata;
-    //Login *k;
     int i = 1;
-    QString m;//想要通信的好友
-    QListWidget *listWidget; //聊天室控件
+    QString m;                // 想要通信的好友
+    QListWidget *listWidget;  // 聊天室控件
     QString resultstr;
     QByteArray showui;
+
 private slots:
     void onReciveData();
     void onSendMessage();
@@ -39,7 +40,6 @@ private slots:
 private:
     QTcpSocket *tcpSocket;
     QByteArray mChat;
-
 
 private:
     Ui::MainWindow *ui;

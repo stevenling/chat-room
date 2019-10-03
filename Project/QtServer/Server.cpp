@@ -34,7 +34,8 @@ int server_socket;
 int opt;
 
 /***配置user字符串***/
-char * catCharInt(char *b,int n) {
+char * catCharInt(char *b,int n) 
+{
 	char c[10];
 	snprintf(c, sizeof(c), "%d", n);
 	char *result = (char*)malloc(7+strlen(c) + strlen(b) + 1);
@@ -59,7 +60,8 @@ Return:         无
 Others:         用于定义socket通信服务器相关的配置
                 进行绑定端口和设置最大的socket连接数 
 *************************************************/  
-void initServiceSocket() {
+void initServiceSocket() 
+{
 	/*  快速清除结构体中成员的值为0 */
 	bzero(&server_addr, sizeof(server_addr));
 
@@ -70,7 +72,8 @@ void initServiceSocket() {
 
 	/*创建服务器上的socket*/
 	server_socket = socket(PF_INET, SOCK_STREAM, 0);  //0 选择第二个参数类型对应的默认协议。
-	if (server_socket < 0) {
+	if (server_socket < 0) 
+	{
 		printf("Create Socket Failed!");
 		exit(1);
 	}
@@ -80,14 +83,16 @@ void initServiceSocket() {
 	setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
 
 	/*  绑定服务器socket端口 */
-	if (bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr))) {
+	if (bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr))) 
+	{
 		printf("Server Bind Port : %d Failed!", HELLO_WORLD_SERVER_PORT);
 		exit(1);
 	}
 
 	/*  监听服务器socket端口，设置最大监听数 */
 	/*  成功返回0，失败返回1 */
-	if (listen(server_socket, LENGTH_OF_LISTEN_QUEUE)) {
+	if (listen(server_socket, LENGTH_OF_LISTEN_QUEUE)) 
+	{
 		printf("Server Listen Failed!");
 		exit(1);
 	}
@@ -97,7 +102,8 @@ void initServiceSocket() {
 /***
 进程服务函数
 ***/
-void* muti(void* args){
+void* muti(void* args)
+{
 	int length;
 	int clientId = *(int *)args;
 	char buffer[BUFFER_SIZE]; 
@@ -108,13 +114,15 @@ void* muti(void* args){
 	while(1){
 		bzero(buffer, BUFFER_SIZE);
 		length = recv(clientId, buffer, BUFFER_SIZE, 0);
-		if (length <= 0) {
+		if (length <= 0) 
+		{
 			printf("Server Recieve Data Failed!\n");
 			break;
 		}
 
 		/* 解析用户名+ID绑定 */
- 		if(buffer[0] == 'A') {
+ 		if(buffer[0] == 'A') 
+ 		{
  			char * begin = strstr(buffer,"#");
  			begin++;
  			char * next = strstr(begin,"#");
@@ -153,7 +161,8 @@ void* muti(void* args){
 			strcat(str,num);
 			send(clientId, str, strlen(str) + 1, 0);*/
  		}
- 		else if(buffer[0] == 'B') {
+ 		else if(buffer[0] == 'B') 
+ 		{
  			char rece[20];
  			char * data;
  			char * begin = strstr(buffer,"#");
@@ -187,7 +196,8 @@ void* muti(void* args){
 			}
 			//printf("%s ",str);
  		}
- 		else if(buffer[0] == 'C') {
+ 		else if(buffer[0] == 'C') 
+ 		{
  			char rece[20];
  			char * data;
  			char * begin = strstr(buffer,"#");
@@ -273,8 +283,6 @@ int main(int argc, char **argv)
 		    printf("%d\n", length);
 		    break;
 		}
-
 	}
-
 	return 0;
 }
