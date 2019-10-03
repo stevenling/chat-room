@@ -24,3 +24,17 @@
 ![登录](https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png)
 
 ![聊天界面](https://raw.githubusercontent.com/stevenling/chat-room/master/src/chat.png)
+
+![显示用户名](https://raw.githubusercontent.com/stevenling/chat-room/master/src/displayUsername.png)
+
+![连接服务器](https://raw.githubusercontent.com/stevenling/chat-room/master/src/connectServer.png)
+
+![登录失败](https://github.com/stevenling/chat-room/blob/master/src/loginError.png)
+
+![群发](https://raw.githubusercontent.com/stevenling/chat-room/master/src/massMessage.png)
+
+![一对一通信1](https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOne%20Communication1.jpg)
+
+![一对一通信2](https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg)
+
+![注册](https://github.com/stevenling/chat-room/blob/master/src/regeister.png)
