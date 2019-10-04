@@ -29,22 +29,46 @@
 
 ### 截图
 
+- 登录
 <div align=center>
-    <img width="900px" height="600px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png"/>
+    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png"/>
+</div>
+  
+  点击注册后，进入注册页面
+
+- 注册
+<div align=center>
+    <img width="650px" height="420px" src="https://github.com/stevenling/chat-room/blob/master/src/regeister.png"/>
 </div>
 
-![聊天界面](https://raw.githubusercontent.com/stevenling/chat-room/master/src/chat.png)
+- 登录失败
+<div align=center>
+    <img width="650px" height="420px" src="https://github.com/stevenling/chat-room/blob/master/src/loginError.png"/>
+</div>
 
-![显示用户名](https://raw.githubusercontent.com/stevenling/chat-room/master/src/displayUsername.png)
+- 聊天界面
+<div align=center>
+    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/chat.png"/>
+</div>
 
-![连接服务器](https://raw.githubusercontent.com/stevenling/chat-room/master/src/connectServer.png)
+- 显示自己的用户名
+<div align=center>
+    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/displayUsername.png"/>
+</div>
 
-![登录失败](https://github.com/stevenling/chat-room/blob/master/src/loginError.png)
+- 连接服务器
+<div align=center>
+    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/connectServer.png"/>
+</div>
 
-![群发](https://raw.githubusercontent.com/stevenling/chat-room/master/src/massMessage.png)
+- 群发消息
+<div align=center>
+    <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/massMessage.png"/>
+</div>
 
-![一对一通信1](https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOne%20Communication1.jpg)
+- 一对一通信
+<div align=center>
+    <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOne%20Communication1.jpg"/>
+      <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg"/>
+</div>
 
-![一对一通信2](https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg)
-
-![注册](https://github.com/stevenling/chat-room/blob/master/src/regeister.png)
