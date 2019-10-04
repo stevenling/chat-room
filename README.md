@@ -30,7 +30,7 @@
 ### 截图
 
 <div align=center>
-    <img width="1200px" height="800px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png"/>
+    <img width="900px" height="600px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png"/>
 </div>
 
 ![聊天界面](https://raw.githubusercontent.com/stevenling/chat-room/master/src/chat.png)
