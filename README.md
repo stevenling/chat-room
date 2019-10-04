@@ -29,7 +29,9 @@
 
 ### 截图
 
-![登录](https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png)
+<div align=center>
+    <img width="300px" height="150px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png"/>
+</div>
 
 ![聊天界面](https://raw.githubusercontent.com/stevenling/chat-room/master/src/chat.png)
 
