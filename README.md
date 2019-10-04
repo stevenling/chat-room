@@ -63,12 +63,12 @@
 
 - 群发消息
 <div align=center>
-    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/massMessage.png"/>
+    <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/massMessage.png"/>
 </div>
 
 - 一对一通信
 <div align=center>
-    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOne%20Communication1.jpg"/>
-      <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg"/>
+    <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOne%20Communication1.jpg"/>
+      <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg"/>
 </div>
 
