@@ -32,7 +32,10 @@ private slots:
     void onShowError(QAbstractSocket::SocketError);
     void on_pushButton_clicked();
     void BackToLog();
-    void sendtouser();//发送数据给用户
+
+    /// @brief 发送数据给用户
+    void sendtouser();
+
     void seek();
     void on_pushButton_2_clicked();
     void showlist();

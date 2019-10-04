@@ -11,30 +11,33 @@
 #include <QDebug>
 #include <QMessageBox>
 
-QString user;//全局变量
+QString user;   // 全局变量
 
 class Manage;
 
+//-------------------------------------------------------
 Login::Login(QWidget *parent, Manage *p) :
     QMainWindow(parent),
     ui(new Ui::Login)
 {
-    this->man = p;  //man 是manage类的一个对象，因此它能够调用ChatStart
+    this->man = p;  // man 是 manage 类的一个对象，因此它能够调用 ChatStart
     ui->setupUi(this);
     setWindowTitle("登录界面");
 
-    manager = new QNetworkAccessManager(this);//声明一个对象，实现post
+    manager = new QNetworkAccessManager(this);  // 声明一个对象，实现 post
     request = new QNetworkRequest();
 
     connect(manager, SIGNAL(finished(QNetworkReply*)),
              this, SLOT(finishedSlot(QNetworkReply*)));
-    //connect(ui->pushButton, SIGNAL(clicked(bool)), this, SLOT(ChatStart()));
 }
+
+//-------------------------------------------------------
 Login::~Login()
 {
     delete ui;
 }
 
+//-------------------------------------------------------
 void Login::finishedSlot(QNetworkReply *reply)
 {
 
@@ -66,22 +69,17 @@ void Login::finishedSlot(QNetworkReply *reply)
      }
      reply->deleteLater();
 }
+
+//-------------------------------------------------------
 void Login::on_pushButton_clicked()
 {
-
-   // QUrl url("http://172.22.1.1/2.php");//待获取的网页
-   //  QUrl url("http://172.22.1.1/accept.php");//待获取的网页
-     //request = new QNetworkRequest();
-    // request->setHeader(QNetworkRequest::UserAgentHeader,"Mozilla/5.0 (Macintosh;");
-   //  request->setHeader();
-     //request->setHeader( QNetworkRequest::ContentTypeHeader, "some/type" );
     request->setHeader(QNetworkRequest::ContentTypeHeader,"application/x-www-form-urlencoded");
 
-    // request->setUrl(QUrl("http://172.22.1.1/validate.php"));//树莓派上的、
-    // request->setUrl(QUrl("http://123.206.186.185/validate.php")); //leyiweb腾讯云
-    request->setUrl(QUrl("http://123.207.251.200/validate.php")); //yunhu腾讯云
+    // request->setUrl(QUrl("http://172.22.1.1/validate.php"));      // 树莓派上的、
+    // request->setUrl(QUrl("http://123.206.186.185/validate.php")); // leyiweb腾讯云
+    request->setUrl(QUrl("http://123.207.251.200/validate.php"));    // yunhu腾讯云
 
-    user = ui->lineEdit->text();           // 获取到username
+    user = ui->lineEdit->text();            // 获取到username
     QString pass = ui->lineEdit_2->text();  // 获取到password
 
     QString str = "username=" + user + "&password=" + pass;
@@ -92,12 +90,15 @@ void Login::on_pushButton_clicked()
     reply = manager->post(*request, postData);
 }
 
-void Login::on_pushButton_2_clicked()//注册
+//--------------------------------------------------------
+void Login::on_pushButton_2_clicked()// 注册
 {
-    // QDesktopServices::openUrl(QUrl(QLatin1String("http://172.22.1.1/register.html")));//树莓派注册
-    //QDesktopServices::openUrl(QUrl(QLatin1String("http://123.206.186.185/register.html")));//leyiweb腾讯云注册
-    QDesktopServices::openUrl(QUrl(QLatin1String("http://123.207.251.200/register.html")));//yunhu腾讯云注册
+    // QDesktopServices::openUrl(QUrl(QLatin1String("http://172.22.1.1/register.html")));       // 树莓派注册
+    // QDesktopServices::openUrl(QUrl(QLatin1String("http://123.206.186.185/register.html")));  // leyiweb腾讯云注册
+    QDesktopServices::openUrl(QUrl(QLatin1String("http://123.207.251.200/register.html")));     // yunhu腾讯云注册
 }
+
+//-------------------------------------------------------
 void Login::ChatStart()
 {
     man->ChatStart();

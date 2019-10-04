@@ -11,9 +11,12 @@ public:
     Manage();
 
 public slots:
-    void ChatStart();//开启聊天界面
-    void BackToLog();//返回登录界面
-    //void gameExit();
+    /// @brief 开启聊天界面
+    void ChatStart();
+
+    /// @brief 返回登录界面
+    void BackToLog();
+    
 private:
     Login *log;
     MainWindow *chat;

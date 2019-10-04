@@ -28,10 +28,13 @@ public:
 signals:
     void sig();
     void display();
+    
 public slots:
     void finishedSlot(QNetworkReply *reply);
     void on_pushButton_2_clicked();
-    void on_pushButton_clicked();  // 登录
+
+    /// @brief 登录
+    void on_pushButton_clicked();  
     void ChatStart();
 
 private:

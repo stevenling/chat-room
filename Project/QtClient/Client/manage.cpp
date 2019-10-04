@@ -2,6 +2,7 @@
 #include"login.h"
 #include"mainwindow.h"
 
+//-------------------------------------------------------
 Manage::Manage()    // 登录界面显示，聊天界面关闭
 {
     log = new Login( NULL,this);
@@ -12,12 +13,15 @@ Manage::Manage()    // 登录界面显示，聊天界面关闭
     log->hide();
     chat->show();
 }
+
+//-------------------------------------------------------
 void Manage::ChatStart()    // 开启聊天
 {
     log->hide();
     chat->show();
 }
 
+//-------------------------------------------------------
 void Manage::BackToLog()    // 返回登录界面
 {
     chat->hide();

@@ -9,6 +9,7 @@
 
 extern QString user;      //声明外部变量
 
+//-------------------------------------------------------
 MainWindow::MainWindow(QWidget *parent, Manage *p) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -24,12 +25,16 @@ MainWindow::MainWindow(QWidget *parent, Manage *p) :
     connect(ui->sendBtn,SIGNAL(clicked(bool)),SLOT(onSendMessage()));//按下发送按钮调用onSendMessage函数
     //connect(ui->listWidget,SIGNAL(itemSelectionChanged()),this,SLOT(sendtouser()));// 改变会触发槽函数sendtouser
 }
-void MainWindow::seek()//拿到数据了
+
+//-------------------------------------------------------
+void MainWindow::seek() // 拿到数据了
 {
      m = ui->label_4->text();
     qDebug()<<m;
 }
-void MainWindow::showlist()//显示好友列表
+
+//-------------------------------------------------------
+void MainWindow::showlist() // 显示好友列表
 {
     QVBoxLayout* layout = new QVBoxLayout;
         listWidget = new QListWidget(this);
@@ -56,20 +61,23 @@ void MainWindow::showlist()//显示好友列表
         ui->widget->show();
         QObject::connect(listWidget, SIGNAL(currentTextChanged(QString)), ui->label_4, SLOT(setText(QString)));
      //   QObject::connect(listWidget, SIGNAL(currentTextChanged(QString)), this,SLOT(seek()));
-
 }
+
+//-------------------------------------------------------
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+//-------------------------------------------------------
 void MainWindow::init()
 {
     //newTcpConnect();
-    tcpSocket = new QTcpSocket;//初始化的时候建立socket
+    tcpSocket = new QTcpSocket; // 初始化的时候建立 socket
     connect(tcpSocket,SIGNAL(readyRead()),SLOT(onReciveData()));
 }
 
+//-------------------------------------------------------
 void MainWindow::newTcpConnect()//第一次发送请求
 {
 
@@ -101,6 +109,7 @@ void MainWindow::newTcpConnect()//第一次发送请求
    //                          ui->portlineEdit->text().toInt());
 }
 
+//-------------------------------------------------------
 void MainWindow::onReciveData()//接收数据
 {
 
@@ -134,6 +143,7 @@ void MainWindow::onReciveData()//接收数据
     ui->textEdit->setText(mChat);
 }
 
+//-------------------------------------------------------
 void MainWindow::onSendMessage()//发送数据
 {
     if(i == 1)
@@ -177,6 +187,8 @@ void MainWindow::onSendMessage()//发送数据
     ui->textEdit->setText(mChat);
     tcpSocket->write(sendMessage);*/
 }
+
+//-------------------------------------------------------
 void MainWindow::sendtouser()//发送指定用户数据
 {
     QByteArray senduser;//定义一个发送的最终数据
@@ -189,20 +201,27 @@ void MainWindow::sendtouser()//发送指定用户数据
      ui->textEdit->setText(senduser);
      tcpSocket->write(senduser);
 }
+
+//-------------------------------------------------------
 void MainWindow::on_pushButton_clicked()//返回
 {
     BackToLog();
 }
+
+//-------------------------------------------------------
 void MainWindow::BackToLog()//重写返回登录界面
 {
     man->BackToLog();
 }
 
+//-------------------------------------------------------
 void MainWindow::on_pushButton_2_clicked()//显示用户名
 {
      userdata = user;
     ui->lineEdit_2->setText(user);
 }
+
+//-------------------------------------------------------
 void MainWindow::onShowError(QAbstractSocket::SocketError)
 {
     qDebug()<<tcpSocket->errorString();

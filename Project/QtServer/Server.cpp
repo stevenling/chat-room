@@ -52,11 +52,6 @@ char * catCharInt(char *b,int n)
 Function:       initServiceSocket() 
 Description:    初始化socket通信 
 Calls:          // 被本函数调用的函数清单 
-Table Accessed: 无 
-Table Updated:  无 
-Input:          无
-Output:         无 
-Return:         无
 Others:         用于定义socket通信服务器相关的配置
                 进行绑定端口和设置最大的socket连接数 
 *************************************************/  
