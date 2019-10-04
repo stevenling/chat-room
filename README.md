@@ -29,8 +29,16 @@
 
 ### 截图
 
+- 登录
 <div align=center>
     <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png"/>
+</div>
+  
+  点击注册后，进入注册页面
+
+- 注册
+<div align=center>
+    <img width="650px" height="420px" src="https://github.com/stevenling/chat-room/blob/master/src/regeister.png"/>
 </div>
 
 ![聊天界面](https://raw.githubusercontent.com/stevenling/chat-room/master/src/chat.png)
@@ -47,4 +55,4 @@
 
 ![一对一通信2](https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg)
 
-![注册](https://github.com/stevenling/chat-room/blob/master/src/regeister.png)
+
