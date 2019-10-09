@@ -73,3 +73,5 @@
       <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg"/>
 </div>
 
+### LICENCE
+![MIT](https://github.com/stevenling/chat-room/blob/master/LICENSE)
