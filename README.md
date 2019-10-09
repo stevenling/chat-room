@@ -1,5 +1,6 @@
 # chat-room
 ![](https://img.shields.io/badge/language-c++-red.svg)
+![](https://img.shields.io/github/license/stevenling/chat-room)
 ### 概述
 
 通过 QT 编写应用程序通信软件，可一对一和一对多通信。
