@@ -74,4 +74,4 @@
 </div>
 
 ### LICENCE
-![MIT](https://github.com/stevenling/chat-room/blob/master/LICENSE)
+[MIT](https://github.com/stevenling/chat-room/blob/master/LICENSE)
