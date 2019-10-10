@@ -2,18 +2,18 @@
 ![](https://img.shields.io/badge/language-c++-red.svg)
 ![](https://img.shields.io/github/license/stevenling/chat-room)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-### 概述
+## 概述
 
 通过 QT 编写应用程序通信软件，可一对一和一对多通信。
 
-### 技术
+## 技术
 - html
 - css
 - QT
 - C++
 - Boostrap
 
-### 功能
+## 功能
 
 - Web 前端
   - 用户注册
@@ -31,7 +31,7 @@
   - 数据转发
   - 通信格式的处理
 
-### 截图
+## 截图
 
 - 登录
 <div align=center>
@@ -76,5 +76,5 @@
       <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg"/>
 </div>
 
-### LICENCE
+## LICENCE
 [MIT](https://github.com/stevenling/chat-room/blob/master/LICENSE)
