@@ -1,6 +1,7 @@
 # chat-room
 ![](https://img.shields.io/badge/language-c++-red.svg)
 ![](https://img.shields.io/github/license/stevenling/chat-room)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 ### 概述
 
 通过 QT 编写应用程序通信软件，可一对一和一对多通信。
