@@ -35,45 +35,45 @@
 
 - 登录
 <div align=center>
-    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/login.png"/>
+    <img width="650px" height="420px" src="assets\login.png"/>
 </div>
   
   点击注册后，进入注册页面
 
 - 注册
 <div align=center>
-    <img width="650px" height="420px" src="https://github.com/stevenling/chat-room/blob/master/src/regeister.png"/>
+    <img width="650px" height="420px" src="assets\regeister.png"/>
 </div>
 
 - 登录失败
 <div align=center>
-    <img width="650px" height="420px" src="https://github.com/stevenling/chat-room/blob/master/src/loginError.png"/>
+    <img width="650px" height="420px" src="assets\loginError.png"/>
 </div>
 
 - 聊天界面
 <div align=center>
-    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/chat.png"/>
+    <img width="650px" height="420px" src="assets\chat.png"/>
 </div>
 
 - 显示自己的用户名
 <div align=center>
-    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/displayUsername.png"/>
+    <img width="650px" height="420px" src="assets\displayUsername.png"/>
 </div>
 
 - 连接服务器
 <div align=center>
-    <img width="650px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/connectServer.png"/>
+    <img width="650px" height="420px" src="assets\connectServer.png"/>
 </div>
 
 - 群发消息
 <div align=center>
-    <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/massMessage.png"/>
+    <img width="800px" height="420px" src="assets\massMessage.png"/>
 </div>
 
 - 一对一通信
 <div align=center>
-    <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOne%20Communication1.jpg"/>
-      <img width="800px" height="420px" src="https://raw.githubusercontent.com/stevenling/chat-room/master/src/oneToOneCommunication2.jpg"/>
+    <img width="800px" height="420px" src="assets\oneToOneCommunication1.jpg"/>
+      <img width="800px" height="420px" src="assets\oneToOneCommunication2.jpg"/>
 </div>
 
 ## LICENCE
